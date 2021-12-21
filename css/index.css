@@ -61,6 +61,15 @@ code span {
   background: #c5c5c5;
   padding: 4px 6px;
   color: #121212;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
+}
+
+.svg-path {
+  fill: #ec8f16;
+  font-size: 1rem;
+  stroke: black;
 }
 
 .list {

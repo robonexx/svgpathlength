@@ -17,6 +17,7 @@ function roundToThree(value) {
 document.querySelector('#submit-btn').addEventListener('click', function () {
   var path = document.querySelector('path');
   var submitted = document.getElementById('path-length').value;
+
   path.setAttribute('d', submitted);
   setTimeout(function () {
     // get total lenght of the path
@@ -24,11 +25,10 @@ document.querySelector('#submit-btn').addEventListener('click', function () {
 
     // using the round function to get 3 decimals
     var total = roundToThree(length);
-    console.log(total);
+    console.log(`total lenght of path = ${total}`);
     document.getElementById('path-output').value = total;
   }, 100);
 });
-
 
 // from https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
 
@@ -39,17 +39,11 @@ function CopyPath() {
   /* Select the text field */
   copyText.select();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
-
-  /* Alert the copied text */
-  console.log('Copied the text: ' + copyText.value);
-
+  console.log(`copied lenght succesfully`);
   /* Copy the text inside the text field */
   return navigator.clipboard.writeText(copyText.value);
 }
 
 document.querySelector('#copy-btn').addEventListener('click', function () {
-  console.log('clicked copy');
   CopyPath();
 });

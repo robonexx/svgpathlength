@@ -58,7 +58,16 @@ code {
 		background: darken($color-bg-light, 20%);
 		padding: 4px 6px;
 		color: $color-txt-light;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 200px;
 	}
+}
+
+.svg-path {
+	fill: $color-txt-orange;
+	font-size: $base-font-size;
+	stroke: black;
 }
 
 
@@ -152,3 +161,5 @@ button {
 		height: 64px;
 	}
 }
+
+
