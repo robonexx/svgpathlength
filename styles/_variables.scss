@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&display=swap');
+
+// font
+
+$font: 'Inter', sans-serif;
+
+// colors 
+
+$color-txt-orange: #ec8f16;
+$color-txt-light: #121212;
+$color-txt-dark: #f4f4f4;
+$color-bg-light: #f8f8f8;
+$color-bg-dark: #282828;
+$color-bg-gray: #d3d3d3;
+$color-slate: #aaaaaa;
+$color-beige: #E9DFD6;
+
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+
+// spacing 
+
+// margin
+$base-margin: 0.75rem;
+$margin-sm: $base-margin * 0.75;
+$margin-lg: $base-margin * 1.5;
+$margin-xl: $base-margin * 2;
+$margin-xxl: $base-margin * 3;
+
+// padding
+$base-padding: 0.75rem;
+$padding-sm: $base-padding * 0.75;
+$padding-lg: $base-padding * 1.5;
+$padding-xl: $base-padding * 2;
+$padding-xxl: $base-padding * 3;
+
+
+// base border styles
+$base-border-radius: 20px;
+$base-border-thickness: 1px;
+
+// z-index
+$z-normal: 10;
+$z-fixed: 100;
+$z-front: 1000;
+
+
+// box shadow
+$base-box-shadow: rgba(0,0,0,0.4);
+$base-box-shadow-light: 1px 3px 5px rgba(143, 143, 143, 0.3), 3px 6px 10px rgba(143, 143, 143, 0.6);

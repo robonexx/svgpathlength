@@ -1,0 +1,154 @@
+
+
+* { box-sizing: border-box; 
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	margin: 0;
+	padding: 0;
+}
+
+body, html { height: 100%; }
+body {
+	color: $color-txt-orange;
+	font-family: $font;
+	background: lighten($color-bg-dark, 5%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	&.before-enter {
+		opacity: 0;
+	}
+	&.enter {
+		opacity: 1;
+		transition: all 1000ms ease-in-out;
+        
+	}
+}
+
+::selection {
+	background: $color-txt-orange;
+	color: $color-txt-dark;
+}
+
+a {
+	color: $color-txt-orange;
+	&:hover, &:focus {
+		color: black;
+		background: $color-bg-light;
+		border-radius: 2px;
+	}
+	&:active {
+		background: $color-bg-gray;
+		color: $color-txt-light;
+	}
+}
+
+i {
+	font-size: $base-font-size;
+	line-height: 1.5;
+	text-align: center;
+}
+
+code {
+	color: $color-slate;
+	span {
+		border-radius: 2px;
+		background: darken($color-bg-light, 20%);
+		padding: 4px 6px;
+		color: $color-txt-light;
+	}
+}
+
+
+
+.list {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	z-index: 10;
+	background-color: $color-bg-dark;
+	
+	li {
+		padding: $base-padding;
+		list-style: none;
+		margin: 0;
+		width: 80%;
+	}
+}
+
+input, button {
+	display: block;
+	width: 100%;
+	margin: 0;
+	font-family: $font;
+	border: 0;
+	border-radius: 2px;
+	&:focus {
+		outline: none;
+	}
+}
+
+input {
+	font-size: 36px;
+	font-weight: 600;
+	text-align: center;
+	color: $color-txt-light;
+	&::placeholder {
+		color: rgba($color-bg-gray, .5);
+	}
+	&:focus {
+		color: $color-slate;
+		&::placeholder {
+			color: rgba($color-bg-gray, .75);
+		}
+	}
+}
+
+button {
+	cursor: pointer;
+	margin-top: $base-margin;
+	background: lighten($color-txt-orange, 5%);
+	color: white;
+	font-size: $font-size-lg;
+	font-weight: 600;
+	height: 42px;
+	width: 100%;
+	text-transform: uppercase;
+	border-radius: 10px;
+	&:hover, &:focus {
+		background: $color-bg-gray;
+		color: $color-txt-orange;
+	}
+	&:active {
+		background: $color-txt-orange;
+		color: rgb(109, 54, 54);
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	ul {
+		li {
+			width: 50%;
+			&:first-child {
+				width: 100%;
+			}
+		}
+	}
+	input {
+		font-size: 96px;
+	}
+	button {
+		font-size: 24px;
+		height: 64px;
+	}
+}

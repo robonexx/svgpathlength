@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Get path lenght in svg</title>
+  </head>
+  <body>
+      <h1>SVG PATH CALCULATOR</h1>
+    <div class="list">
+      <li>
+        <i>
+            Read:
+          <a
+            href="https://css-tricks.com/svg-path-syntax-illustrated-guide/"
+            target="_blank"
+            >SVG path Syntax Guide</a
+          > </br>
+          Copy & Paste the path in the first inputfield to find its length, i.e.
+          <code
+            >&lt;path&nbsp;d="<span>M22.5,88.5 L257.5,293.5</span>"&gt;</code
+          >
+          - this helps out when calculating the path lengths for stroke length (stroke-dashoffset) when creating animations.
+        </i>
+      </li>
+      <li>
+        <input id="path-length" type="text" onClick="this.select();" />
+        <button id="submit-btn">get length</button>
+      </li>
+      <li>
+        <input
+          id="path-output"
+          class="copy"
+          data-clipboard-target="#path-output"
+          type="text"
+        />
+        <button id="copy-btn" class="copy" data-clipboard-target="#path-output">
+          copy
+        </button>
+      </li>
+    </div>
+
+    <svg><path d=""></path></svg>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

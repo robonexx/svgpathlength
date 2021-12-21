@@ -1,0 +1,27 @@
+.card {
+    display: block;
+    width: 80vw;
+    height: 20vh;
+    background-color: $color-beige;
+    padding: $base-padding;
+    border: $base-border-thickness;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow-light;
+
+    
+}
+
+.card-title {
+    font-size: $font-size-lg;
+    padding-bottom: $base-padding;
+    font-weight: bold;
+}
+
+.card-body {
+    
+    font-size: $base-font-size
+
+        a {
+            text-decoration: none;
+        }
+}

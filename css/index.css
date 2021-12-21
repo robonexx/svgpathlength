@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&display=swap");
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  color: #ec8f16;
+  font-family: "Inter", sans-serif;
+  background: #353535;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+body.before-enter {
+  opacity: 0;
+}
+body.enter {
+  opacity: 1;
+  transition: all 1000ms ease-in-out;
+}
+
+::selection {
+  background: #ec8f16;
+  color: #f4f4f4;
+}
+
+a {
+  color: #ec8f16;
+}
+a:hover, a:focus {
+  color: black;
+  background: #f8f8f8;
+  border-radius: 2px;
+}
+a:active {
+  background: #d3d3d3;
+  color: #121212;
+}
+
+i {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+code {
+  color: #aaaaaa;
+}
+code span {
+  border-radius: 2px;
+  background: #c5c5c5;
+  padding: 4px 6px;
+  color: #121212;
+}
+
+.list {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  z-index: 10;
+  background-color: #282828;
+}
+.list li {
+  padding: 0.75rem;
+  list-style: none;
+  margin: 0;
+  width: 80%;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  border: 0;
+  border-radius: 2px;
+}
+input:focus, button:focus {
+  outline: none;
+}
+
+input {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: #121212;
+}
+input::placeholder {
+  color: rgba(211, 211, 211, 0.5);
+}
+input:focus {
+  color: #aaaaaa;
+}
+input:focus::placeholder {
+  color: rgba(211, 211, 211, 0.75);
+}
+
+button {
+  cursor: pointer;
+  margin-top: 0.75rem;
+  background: #ee9a2e;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 42px;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+button:hover, button:focus {
+  background: #d3d3d3;
+  color: #ec8f16;
+}
+button:active {
+  background: #ec8f16;
+  color: #6d3636;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul li {
+    width: 50%;
+  }
+  ul li:first-child {
+    width: 100%;
+  }
+
+  input {
+    font-size: 96px;
+  }
+
+  button {
+    font-size: 24px;
+    height: 64px;
+  }
+}
